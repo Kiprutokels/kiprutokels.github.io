@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ExpenseTracker</string>
+    <string name="back">Rudi</string>
+    <string name="get_started">Tuanze</string>
+    <string name="name_hint">Jina</string>
+    <string name="email_hint">Barua pepe</string>
+    <string name="password_hint">Nenosiri</string>
+    <string name="confirm_password_hint">Thibitisha Nenosiri</string>
+    <string name="agree_to_data_processing">Nakubali usindikaji wa data binafsi</string>
+    <string name="signup_button">Jisajili</string>
+    <string name="login_link">Tayari una akaunti? Ingia</string>
+    <string name="back_button_desc">Kitufe cha kurudi</string>
+    <string name="login_button">Ingia</string>
+    <string name="forgot_password_link">Umesahau Nenosiri?</string>
+    <string name="signup_link">Huna akaunti? Jisajili</string>
+    <string name="welcome_back">Karibu tena</string>
+    <string name="change_password">Badilisha Nenosiri</string>
+    <string name="current_password_hint">Nenosiri la Sasa</string>
+    <string name="new_password_hint">Nenosiri Jipya</string>
+    <string name="submit">Tuma</string>
+    <string name="edit_profile">Hariri Wasifu</string>
+    <string name="save">Hifadhi</string>
+    <string name="first_name">Jina la Kwanza</string>
+    <string name="last_name">Jina la Mwisho</string>
+    <string name="your_email">Barua Pepe Yako</string>
+    <string name="phone_number">Nambari ya Simu</string>
+    <string name="delete_account">Futa Akaunti</string>
+    <string name="sort_icon">Panga Ikoni</string>
+    <string name="add_category">Ongeza Jamii</string>
+    <string name="category_name_hint">Jina la Jamii</string>
+    <string name="pick_icon_hint">Chagua Ikoni</string>
+    <string name="pick_color_hint">Chagua Rangi</string>
+    <string name="description_hint">Maelezo</string>
+    <string name="more_options">Chaguo Zaidi</string>
+    <string name="settings">Mipangilio</string>
+    <string name="profile">Wasifu</string>
+    <string name="help">Msaada</string>
+    <string name="about">Kuhusu</string>
+    <string name="logout">Ondoka</string>
+    <string name="theme">Mandhari</string>
+    <string name="notifications">Arifa</string>
+    <string name="currency">Sarafu</string>
+    <string name="language">Lugha</string>
+    <string name="account_settings">Mipangilio ya Akaunti</string>
+    <string name="reset_data">Weka Data upya</string>
+    <string name="help_support">Msaada na Usaidizi</string>
+    <string name="faq">Maswali Yanayoulizwa Mara kwa Mara</string>
+    <string name="faq_content">
+1. ExpenseTracker ni nini?
+ExpenseTracker inakusaidia kusimamia fedha zako kwa kuorodhesha mapato, matumizi, bajeti, na kutengeneza ripoti.\n\n
+2. Nitaongezaje matumizi au mapato?
+Bonyeza kitufe cha hatua kinachozunguka, jaza maelezo, na uhifadhi.\n\n
+3. Ni aina gani za ripoti ninaweza kutengeneza?
+Ripoti za matumizi na bajeti zinazoonyesha mgawanyo wa matumizi.\n\n
+4. Ninaweza kuona ripoti wapi?
+Angalia sehemu ya Ripoti.\n\n
+5. Sehemu ya Uchambuzi ni nini?
+Fuata mwelekeo wa kila siku na kila wiki na mapato, matumizi, na salio na mtazamo kwa siku.\n\n
+6. Je, ninaweza kuongeza kategoria maalum?
+Ndiyo, kwenye sehemu ya Kategoria.\n\n
+7. Ninawezaje kusimamia bajeti?
+Bonyeza kitufe kwenye ukurasa wa kwanza kuweka bajeti ya kila mwezi na kuziona kwenye sehemu ya bajeti.\n\n
+8. Ninaweza kuhariri au kufuta miamala?
+Ndiyo, kutoka kwenye Miamala au Nyumbani.\n\n
+9. Je, data yangu iko salama?
+Data imehifadhiwa kwa usalama na Firebase.\n\n
+10. Ninaweza kutumia ExpenseTracker nje ya mtandao?
+Unahitaji muunganisho wa intaneti kwa ajili ya mabadiliko.
+</string>
+    <string name="contact_support">Wasiliana na Usaidizi</string>
+    <string name="contact_support_content">
+Unahitaji msaada? Wasiliana nasi:\n\n
+Barua pepe: support@expensetracker.com\n
+Simu: +254 112277715
+</string>
+    <string name="submit_ticket">Wasilisha Tiketi</string>
+
+
+    <string name="pick_date">Chagua Tarehe</string>
+        <string name="select_date">Chagua Tarehe</string>
+        <string name="pick_time">Chagua Muda</string>
+        <string name="select_time">Chagua Muda</string>
+        <string name="amount">Kiasi</string>
+        <string name="enter_amount">Weka kiasi</string>
+        <string name="category">Kategoria</string>
+        <string name="select_category">Chagua Kategoria</string>
+        <string name="description">Maelezo</string>
+        <string name="add_description">Ongeza maelezo..</string>
+
+    <string name="error_fetching_expenses">Hitilafu katika kupata gharama</string>
+        <string name="error_fetching_income">Hitilafu katika kupata mapato</string>
+        <string name="error_fetching_budget">Hitilafu katika kupata bajeti</string>
+        <string name="user_data_deleted">Data ya mtumiaji imetolewa isipokuwa jina na barua pepe</string>
+        <string name="error_preserving_user_details">Hitilafu katika kuhifadhi maelezo ya mtumiaji</string>
+        <string name="search_hint">Tafuta...</string>
+        <string name="welcome">Karibu!</string>
+        <string name="expenses">Matumizi</string>
+        <string name="expense_result">0.00</string>
+        <string name="income">Mapato</string>
+        <string name="income_result">0.00</string>
+        <string name="this_month">Mwezi huu</string>
+        <string name="balance_label">Salio: </string>
+        <string name="balance_value">0.00</string>
+        <string name="recent_transactions">Miamala ya Hivi Karibuni</string>
+        <string name="view_all">Angalia zote</string>
+        <string name="budgets">Bajeti</string>
+        <string name="no_budget">Hakuna bajeti kwa mwezi huu?</string>
+        <string name="setting_budgets">Kuweka bajeti kunakusaidia kudhibiti fedha zako na kufuatilia matumizi yako.</string>
+        <string name="setup_budget">Weka bajeti</string>
+
+        <string name="transactions">Miamala</string>
+        <string name="accounts">Akaunti</string>
+        <string name="reports">Ripoti</string>
+        <string name="app_logo">Nembo ya Programu</string>
+        <string name="expense_tracker">Kifuatiliaji Matumizi</string>
+        <string name="version">Toleo %1$s</string>
+        <string name="app_description">Kifuatiliaji Matumizi kinakusaidia kudhibiti na kufuatilia matumizi yako kwa ufanisi. Inakuruhusu kufuatilia miamala yako, kuweka bajeti, na kupata ufahamu kuhusu tabia zako za matumizi.</string>
+        <string name="developed_by">Imetengenezwa na: Classic Group</string>
+        <string name="contact">Mawasiliano: classicgroup@gmail.com</string>
+
+        <string name="accounts_list">Orodha ya Akaunti</string>
+        <string name="account_name">Jina la Akaunti</string>
+        <string name="account_balance">Salio la Akaunti</string>
+        <string name="add_account">Ongeza Akaunti</string>
+        <string name="add_transaction">Ongeza Muamala</string>
+        <string name="account_name_hint">Jina la Akaunti</string>
+        <string name="initial_balance_hint">Salio la Awali</string>
+        <string name="save_account">Hifadhi Akaunti</string>
+        <string name="add_budget">Ongeza Bajeti</string>
+        <string name="budget_name_hint">Jina la Bajeti</string>
+        <string name="budget_amount_hint">Kiasi cha Bajeti</string>
+        <string name="save_budget">Hifadhi Bajeti</string>
+
+        <string name="hi">Habari!</string>
+        <string name="good_morning">Habari za Asubuhi</string>
+        <string name="good_afternoon">Habari za Mchana</string>
+        <string name="good_evening">Habari za Jioni</string>
+
+</resources>

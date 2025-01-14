@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="theme_options">
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="currency_options">
+        <item>USD</item>
+        <item>EUR</item>
+        <item>KES</item>
+    </string-array>
+
+    <string-array name="language_options">
+        <item>English</item>
+        <item>Swahili</item>
+    </string-array>
+
+    <string-array name="account_types">
+        <item>Cash</item>
+        <item>Bank</item>
+        <item>Credit Card</item>
+
+    </string-array>
+    <string-array name="budget_categories">
+        <item>All</item>
+        <item>Groceries</item>
+        <item>Rent</item>
+        <item>Utilities</item>
+        <item>Entertainment</item>
+    </string-array>
+
+        <string-array name="category_types">
+            <item>Income</item>
+            <item>Expense</item>
+        </string-array>
+
+
+</resources>

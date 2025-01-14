@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Toolbar Section -->
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSecondary"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="user icon"
+            android:paddingStart="8dp"
+            android:paddingEnd="16dp"
+            android:src="@drawable/ic_action_name" />
+
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search here..."
+                android:background="@drawable/search_bar_background"
+                android:padding="8dp" />
+
+        <ImageView
+            android:id="@+id/bell_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:contentDescription="@string/notifications"
+            android:src="@drawable/baseline_notifications_none_24"
+            app:tint="?attr/colorOnPrimary" />
+
+        <ImageView
+            android:id="@+id/help_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:contentDescription="@string/help"
+            android:src="@drawable/baseline_help_outline_24"
+            app:tint="?attr/colorOnPrimary" />
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Greeting Section -->
+            <LinearLayout
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:background="@drawable/topbar"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/greeting_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:paddingBottom="8dp"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+
+            <!-- Recent Transactions Title -->
+            <TextView
+                android:id="@+id/this_month_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/top"
+                android:text="@string/this_month"
+                android:padding="8dp"
+                android:textSize="18sp"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"/>
+            <LinearLayout
+                android:id="@+id/income_expense_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/this_month_text"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="12dp">
+
+                <!-- Expense CardView -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_expense"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="40dp"
+                    app:cardBackgroundColor="@color/red">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/expenses"
+                                android:textColor="@color/backgroundLight"
+                                android:textAppearance="?android:textAppearanceMedium"/>
+
+                            <TextView
+                                android:id="@+id/expense_set_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/expense_result"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:textColor="@android:color/white"
+                                android:paddingTop="2dp"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Income CardView -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardview_income"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:cardElevation="2dp"
+                    app:cardCornerRadius="40dp"
+                    app:cardBackgroundColor="@color/green">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="2dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/income"
+                                android:textColor="@color/backgroundLight"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:gravity="center" />
+
+                            <TextView
+                                android:id="@+id/income_set_result"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/income_result"
+                                android:textColor="@color/backgroundLight"
+                                android:textAppearance="?android:textAppearanceMedium"
+                                android:paddingTop="2dp"
+                                android:gravity="center"/>
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <!-- Balance CardView Section -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/balance_cardview"
+                android:layout_width="172dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_below="@id/income_expense_container"
+                android:layout_marginTop="2dp"
+                app:cardElevation="2dp"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:id="@+id/balance_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/balance_label"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:gravity="center"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:id="@+id/balance_value"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="@string/balance_value"
+                        android:gravity="center" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/balance_cardview"
+                android:layout_marginTop="16dp"
+                android:padding="8dp"
+                android:id="@+id/recent_trans_see_all">
+
+                <!-- Recent Transactions Title -->
+                <TextView
+                    android:id="@+id/text_recent_transactions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recent_transactions"
+                    android:textSize="18sp"
+                    android:layout_alignParentStart="true"
+                    android:textStyle="bold"/>
+
+                <!-- View all Link -->
+                <TextView
+                    android:id="@+id/text_view_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view_all"
+                    android:textSize="16sp"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_below="@+id/recent_trans_see_all"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:layout_marginStart="65dp"
+                style="?android:attr/progressBarStyleSmall" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_recent_transactions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recent_trans_see_all"
+                android:layout_marginTop="1dp"
+                android:padding="16dp"/>
+
+            <!-- No Transactions View -->
+            <LinearLayout
+                android:id="@+id/no_transactions_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_below="@id/recycler_view_recent_transactions"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/no_transactions_image"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_transactions" />
+
+                <TextView
+                    android:id="@+id/no_transactions_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No transactions yet!"
+                    android:textSize="16sp"
+                    android:paddingTop="8dp"
+                    android:textAlignment="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your latest transactions will appear here."
+                    android:textSize="12sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:paddingTop="4dp"
+                    android:textAlignment="center" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/budget"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/no_transactions_view"
+                android:text="@string/budgets"
+                android:textSize="18sp"
+                android:padding="8dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:layout_alignParentStart="true"
+                android:textStyle="bold"
+                android:paddingBottom="4dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_budget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/budget"
+                android:layout_margin="16dp"
+                android:layout_marginTop="16dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardBackgroundColor="?attr/colorSurface">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    android:background="@drawable/edit_text_background">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/no_budget"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:textAppearanceSmall"
+                        android:paddingBottom="8dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_budgets"
+                        android:textSize="12sp"
+                        android:paddingBottom="6dp"/>
+
+                    <Button
+                        android:id="@+id/button_setup_budget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="36dp"
+                        android:layout_marginTop="8dp"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:text="@string/setup_budget"
+                        android:textSize="12sp"
+                        android:textColor="@color/white"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

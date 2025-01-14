@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TransactionsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Toolbar Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolbar"
+            android:background="?attr/colorSecondary"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/lefticon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="Back"
+                android:src="@drawable/baseline_arrow_back_24"
+                app:tint="?attr/colorPrimary" />
+
+            <TextView
+                android:id="@+id/transactionstxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="Transactions"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <!-- Sort Icon at the end of the Toolbar -->
+            <ImageView
+                android:id="@+id/sortIcon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/baseline_sort_24"
+                android:contentDescription="Sort Icon"
+                app:tint="?attr/colorPrimary" />
+        </LinearLayout>
+
+        <!-- Divider Line -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/divider"
+            android:background="@color/black" />
+
+        <!-- Search and Filter Section -->
+        <LinearLayout
+            android:id="@+id/row"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:layout_margin="12dp"
+            android:gravity="center_vertical">
+
+            <!-- Search Bar -->
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.7"
+                android:hint="Search transactions"
+                android:padding="10dp"
+                android:background="@drawable/button_background_transparent"
+                android:textColor="?attr/colorPrimary"
+                android:drawableLeft="@drawable/baseline_search_24"
+                android:drawableTint="?attr/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/filter"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="0.15"
+                android:layout_marginStart="8dp"
+                android:padding="10dp"
+                android:src="@drawable/baseline_filter_alt_24"
+                android:textSize="16sp"
+                app:tint="?attr/colorPrimary" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <!-- RecyclerView for Transactions -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:layout_margin="16dp" />
+
+            <!-- No Transactions View -->
+            <LinearLayout
+                android:id="@+id/empty_state_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/empty_state_image"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@drawable/ic_transactions" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No transactions"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="8dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tap + to add"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginTop="8dp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/fab_add_transaction"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:text="New"
+            android:textSize="12sp"
+            app:backgroundTint="?attr/colorPrimary"
+            android:textColor="@color/white"
+            app:icon="@drawable/add_icon"
+            app:iconTint="@color/white"
+            app:extendMotionSpec="@animator/extend_fab_motion"/>
+
+    </LinearLayout>
+</RelativeLayout>

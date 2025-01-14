@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <GridLayout
+        android:id="@+id/icon_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="5"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/charity"
+            android:padding="8dp"
+            android:tag="charity"
+            android:contentDescription="Icon 1" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/childcare"
+            android:padding="8dp"
+            android:tag="childcare"
+            android:contentDescription="Icon 2" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/personal_care"
+            android:padding="8dp"
+            android:tag="entertainment"
+            android:contentDescription="Icon 3" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/fitness"
+            android:padding="8dp"
+            android:tag="fitness"
+            android:contentDescription="Icon 4" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/gifts"
+            android:padding="8dp"
+            android:tag="gifts"
+            android:contentDescription="Icon 5" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/groceries"
+            android:padding="8dp"
+            android:tag="groceries"
+            android:contentDescription="Icon 6" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/personal_care"
+            android:padding="8dp"
+            android:tag="personal_care"
+            android:contentDescription="Icon 7" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/pets"
+            android:padding="8dp"
+            android:tag="pets"
+            android:contentDescription="Icon 8" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/subscriptions"
+            android:padding="8dp"
+            android:tag="subscriptions"
+            android:contentDescription="Icon 9" />
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/transportation"
+            android:padding="8dp"
+            android:tag="transportation"
+            android:contentDescription="Icon 10" />
+    </GridLayout>
+</RelativeLayout>
