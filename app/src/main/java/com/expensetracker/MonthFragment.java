@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -45,8 +44,6 @@ public class MonthFragment extends Fragment {
             db = FirebaseFirestore.getInstance();
             expensesRef = db.collection("users").document(userId).collection("expenses");
             incomeRef = db.collection("users").document(userId).collection("income");
-        } else {
-            Toast.makeText(getContext(), "User not authenticated", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -58,6 +55,10 @@ public class MonthFragment extends Fragment {
         // Initialize charts
         expenseChart = binding.expensePieChart;
         incomeChart = binding.incomePieChart;
+
+        // Configure empty state appearance
+        configureEmptyChart(expenseChart);
+        configureEmptyChart(incomeChart);
 
         // Fetch and populate charts for the month
         fetchMonthData();
@@ -102,7 +103,10 @@ public class MonthFragment extends Fragment {
                                         categoryColors.put(transaction.getCategory(), colorPalette[colorIndex++]);
                                     } else {
                                         // Assign random color if palette is exhausted
-                                        categoryColors.put(transaction.getCategory(), Color.rgb((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255)));
+                                        categoryColors.put(transaction.getCategory(), Color.rgb(
+                                                (int) (Math.random() * 255),
+                                                (int) (Math.random() * 255),
+                                                (int) (Math.random() * 255)));
                                     }
                                 }
                                 colors.add(categoryColors.get(transaction.getCategory()));
@@ -116,11 +120,27 @@ public class MonthFragment extends Fragment {
                         chart.setData(data);
                         chart.invalidate(); // Refresh the chart
                     } else {
-                        Toast.makeText(getContext(), "No transactions found", Toast.LENGTH_SHORT).show();
+                        // Set "No transactions found" inside the PieChart
+                        chart.setData(null);
+                        chart.setNoDataText("No transactions found");
+                        chart.setNoDataTextColor(Color.GRAY);
+                        chart.setTouchEnabled(false); // Disable interactions on empty chart
+                        chart.invalidate(); // Refresh the chart
                     }
                 })
                 .addOnFailureListener(e -> {
-                    Toast.makeText(getContext(), "Failed to fetch transactions", Toast.LENGTH_SHORT).show();
+                    chart.setData(null);
+                    chart.setNoDataText("Failed to load data");
+                    chart.setNoDataTextColor(Color.RED);
+                    chart.setTouchEnabled(false);
+                    chart.invalidate();
                 });
+    }
+
+    // Method to configure the chart's appearance when empty
+    private void configureEmptyChart(PieChart chart) {
+        chart.setNoDataText("Loading...");
+        chart.setNoDataTextColor(Color.DKGRAY);
+        chart.setTouchEnabled(false);
     }
 }
