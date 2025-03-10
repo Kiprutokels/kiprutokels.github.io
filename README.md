@@ -101,6 +101,6 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 
 For questions, feedback, or collaboration:
 
-- **Your Name**: [Classic group](class.classicgroup@gmail.com)
-- **GitHub**: [Classic group](https://github.com/Classicgrp)
+- **Your Name**: [Kipruto Kelvin](kiprutokels@gmail.com)
+- **GitHub**: [kiprutokels](https://github.com/Kiprutokels)
 
